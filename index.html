@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMDS of Users</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Syne+Mono&family=Wallpoet&display=swap" rel="stylesheet">
+  </head>
+
+
+<body>
+    <header>
+        <!-- Navbar with only a title -->
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container">
+                <a href="index.html"><div id="title">Welcome to AMDS</div></a>
+            </div><!-- End .container -->
+        </nav><!-- End #header-nav -->
+    </header>
+
+    <!-- Main content(table and Input Buttons) -->
+    <div id="main-content" class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-6 col-sm-8 col-xs-9">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">R</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Birthday</th>
+                            <th scope="col">Marital Status</th>
+                            <th scope="col">Has kids?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+            </div><!-- End table -->
+            <div class="col-lg-4 col-md-6 col-sm-4 col-xs-3">
+                <input class="btn col-lg-12 col-md-12 col-sm-12 col-xs-12" type="button" data-toggle="modal" data-target="#add" value="Add" />
+                <input class="btn col-lg-12 col-md-12 col-sm-12 col-xs-12" type="button" data-toggle="modal" data-target="#mod" disabled value="Modify" />
+                <input class="btn col-lg-12 col-md-12 col-sm-12 col-xs-12" type="button" data-toggle="modal" data-target="#del" disabled value="Delete" />
+                <input class="btn col-lg-12 col-md-12 col-sm-12 col-xs-12" type="button" data-toggle="modal" data-target="#sea" value="Search" />
+            </div>
+        </div><!-- End of .row -->
+    </div><!-- End of #main-content -->
+
+
+    <!-- Modal of add user -->
+    <div class="modal fade" id="add" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModal-label">Add User</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="nameTxt">Name:</label><input id="nameTxt" type="text" title="Characters only">
+                        <label for="ageTxt">Age:</label><input id="ageTxt" type="text" title="Numbers only">
+                        <label for="birthdayDate">Birthday:</label><input type="date" id="birthdayDate" name="birthday">
+                        <label for="maritalStatusSel">Marital Status:</label>
+                        <select id="maritalStatusSel" name="select">
+                            <option value="Married">Married</option>
+                            <option value="Widowed">Widowed</option>
+                            <option value="Separated">Separated</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Single">Single</option>
+                          </select>
+                        <div class="form-check">
+                            <label class="form-check-label" for="hasKidsChk">Has Kids?</label>
+                            <input class="form-check-input" type="checkbox" value="" id="hasKidsChk" >
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="addButton">Add</button>
+                </div><!-- End of .modal-footer -->
+            </div><!-- End of .modal-content -->
+        </div><!-- End of .modal-dialog -->
+    </div><!-- End of #add -->
+
+
+    <!-- Modal of modify user -->
+    <div class="modal fade" id="mod" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModal-label1">Modify User</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="nameTxt1">Name:</label><input id="nameTxt1" type="text" title="Characters only">
+                        <label for="ageTxt1">Age:</label><input id="ageTxt1" type="text" title="Numbers only">
+                        <label for="birthdayDate1">Birthday:</label><input type="date" id="birthdayDate1" name="birthday1">
+                        <label for="maritalStatusSel1">Marital Status:</label>
+                        <select id="maritalStatusSel1" name="select">
+                            <option value="Married">Married</option>
+                            <option value="Widowed">Widowed</option>
+                            <option value="Separated">Separated</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Single">Single</option>
+                          </select>
+                        <div class="form-check">
+                            <label class="form-check-label" for="hasKidsChk1">Has Kids?</label>
+                            <input class="form-check-input" type="checkbox" value="" id="hasKidsChk1" >
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="modifyButton">Modify</button>
+                </div><!-- End of .modal-footer -->
+            </div><!-- End of .modal-content -->
+        </div><!-- End of .modal-dialog -->
+    </div><!-- End of #mod -->
+
+
+    <!-- Modal of search user -->
+    <div class="modal fade" id="sea" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModal-label2">Search User</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="searchTxt">Id:</label><input id="searchTxt" type="text" title="Characters only">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="searchButton" data-dismiss="modal">Search</button>
+                </div><!-- End of .modal-footer -->
+            </div><!-- End of .modal-content -->
+        </div><!-- End of .modal-dialog -->
+    </div><!-- End of #sea -->
+
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="./js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Helper.js"></script>
+  <script src="js/Controler.js"></script>
+</body>
+</html>

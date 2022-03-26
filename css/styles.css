@@ -1,0 +1,96 @@
+/*Nabvar*/
+#title {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 10px;
+  font-family: 'Wallpoet', cursive;
+}
+
+#header-nav {
+  background-image: url('../imagen.jpg');
+  border-color: black;
+  border-width: 4px;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+/*End Navbar*/
+
+
+/*Main content*/
+div > input {
+  background-color: #F8DCF6;
+  font-size: 15px;
+  font-weight: bold;
+  border-width: 2px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: 'Syne Mono', monospace;
+}
+
+body {
+  background-color: #3D0B64;
+}
+
+th, td {
+  color: ghostwhite;
+  font-family: 'Syne Mono', monospace;
+}
+/*End Main content*/
+
+
+/*Modal*/
+.modal-md {
+  width: 400px;
+}
+
+.modal-title {
+  color: rgb(107, 37, 148);
+  font-size: xx-large;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.modal-header, .modal-footer {
+  background-color: rgb(186, 166, 223);
+}
+
+.modal-body {
+  background-color: rgb(203 186 217);
+}
+
+form > label, div > label {
+  font-family: 'Oswald', sans-serif;
+  color: #6c1d7c;
+  text-align: left;
+  font-size: large;
+  font-weight: lighter;
+  width: 20%;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+form > input, #maritalStatus, #birthday {
+  width: 60%;
+  font-family: 'Syne Mono', monospace
+}
+
+.btn-default, .btn-primary {
+  background-color: #F8DCF6;
+  color: rgb(107, 37, 148);
+  border-color: white;
+  font-family: 'Syne Mono', monospace;
+  font-weight: bold;
+}
+/*End Modal*/
+
+
+.highlight {
+  background-color: rgba(255, 0, 200, 0.411);
+}
